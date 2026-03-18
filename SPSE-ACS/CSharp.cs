@@ -12,10 +12,10 @@ namespace SPCSOM4
     {
         static async Task Main(string[] args)
         {
-            string siteUrl = "siteURL";
-            string clientId = "app ID";
-            string clientSecret = "client secret";
-             
+            string siteUrl = "https://your-sp-site";
+            string clientId = "your-app-id";
+            string clientSecret = "your-app-secret";
+              
             string realm = GetRealmFromTargetUrl(new Uri(siteUrl));
             Console.WriteLine("releam: " + realm);
             string accessToken = await GetAppOnlyAccessToken(siteUrl, realm, clientId, clientSecret);
